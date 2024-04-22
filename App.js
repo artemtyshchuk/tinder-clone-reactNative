@@ -10,7 +10,7 @@ import { AuthProvider } from "./hooks/useAuth";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const user = true;
+  const user = true; //TODO auth component
   return (
     <NavigationContainer>
       <SafeAreaProvider>
