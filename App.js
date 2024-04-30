@@ -1,6 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 
-import useAuth, { AuthProvider } from "./hooks/useAuth";
+import { AuthProvider } from "./hooks/useAuth";
 import StackNavigator from "./StackNavigator";
 
 export default function App() {

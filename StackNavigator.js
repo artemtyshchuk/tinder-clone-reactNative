@@ -14,12 +14,12 @@ const StackNavigator = () => {
 
   return (
     <Stack.Navigator>
-      {user ? (
+      {user.name && user.email ? (
         <>
           <Stack.Screen
             name="HomeScreen"
             component={HomeScreen}
-            // options={{ headerShown: false }}
+            options={{ headerShown: false }}
           />
           <Stack.Screen
             name="ChatScreen"
@@ -31,7 +31,7 @@ const StackNavigator = () => {
         <Stack.Screen
           name="LoginScreen"
           component={LoginScreen}
-          // options={{ headerShown: false }}
+          options={{ headerShown: false }}
         />
       )}
     </Stack.Navigator>
