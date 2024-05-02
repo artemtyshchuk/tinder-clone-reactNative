@@ -9,7 +9,7 @@ const LoginScreen = () => {
 
   const handleSignIn = () => {
     updateUser({
-      name: "Artem Tys",
+      name: "Artem Tyshchuk",
       email: "gg@ex.com",
       photoURL:
         "https://wl-adme.cf.tsp.li/resize/728x/jpg/4a2/a04/8ab3215ee78bfaa95219bddeed.jpg",

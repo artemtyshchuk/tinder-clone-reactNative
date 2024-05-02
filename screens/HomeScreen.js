@@ -65,7 +65,7 @@ const HomeScreen = () => {
           />
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("ModalScreen")}>
           <Image
             className="w-12 h-12 rounded-full"
             source={require("../assets/tinderlogo.png")}
