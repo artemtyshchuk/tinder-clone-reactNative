@@ -10,6 +10,23 @@ const ModalScreen = () => {
 
   const incompleteForm = !image || !job || !age;
 
+  const updateUserProfile = () => {
+    setDoc(doc(db, "users", user.uid), {
+      id: user.uid,
+      displayName: user.displayName,
+      photoURL: image,
+      job: job,
+      age: age,
+      timestamp: serverTimestamp(),
+    })
+      .then(() => {
+        navigation.navigate("HomeScreen");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   return (
     <View className="flex-1 items-center pt-1">
       <Image
@@ -53,7 +70,10 @@ const ModalScreen = () => {
 
       <TouchableOpacity
         disabled={incompleteForm}
-        className="w-64 p-3 rounded-xl absolute bottom-10 bg-red-400"
+        className={`w-64 p-3 rounded-xl absolute bottom-10 ${
+          incompleteForm ? "bg-gray-400" : "bg-red-400"
+        }`}
+        onPress={updateUserProfile}
       >
         <Text className="text-center text-white text-xl">Update Profile</Text>
       </TouchableOpacity>
